@@ -5,10 +5,9 @@ class Solution {
         for(int i=0; i<len; i++) {
             char c = s.charAt(i);
             if(map.containsKey(c)) {
-                int val = map.get(c);
-                if(val > start) {
-                    cnt = i - val - 1;
-                    start = val;
+                if(map.get(c) > start) {
+                    cnt = i - map.get(c) - 1;
+                    start = map.get(c);
                 }
             }
             cnt++;
